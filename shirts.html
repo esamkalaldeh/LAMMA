@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store | Shirts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🛍️</span>
+                        <span class="logo-text">LAMMA Store</span>
+                    </a>
+                </div>
+                <div class="search-box">
+                    <input type="search" id="searchInput" placeholder="Search products..." />
+                    <button id="searchBtn">🔍</button>
+                </div>
+                <nav class="nav-categories">
+                    <a href="index.html" class="nav-link">All</a>
+                    <a href="tshirts.html" class="nav-link">T-Shirts</a>
+                    <a href="shirts.html" class="nav-link active">Shirts</a>
+                    <a href="pants.html" class="nav-link">Pants</a>
+                    <a href="jackets.html" class="nav-link">Jackets</a>
+                    <a href="shoes.html" class="nav-link">Shoes</a>
+                    <a href="accessories.html" class="nav-link">Accessories</a>
+                </nav>
+                <button class="cart-btn" id="cartBtn">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Shirts</h2>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">✕</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalName"></h2>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-stock" id="modalStock"></p>
+                    <button class="add-to-cart-btn" id="modalAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Your trusted destination for quality clothing and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LAMMA Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            filterByCategory('Shirts');
+        });
+    </script>
+</body>
+</html>
